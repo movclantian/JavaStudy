@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long ans = 0;
+
+        for (long i = 1; i <= 20240601; i++) {
+            for (long j = 1; j <= 20240601; j++) {
+                if ((i * i + j * j) / 6421 == 0) {
+                    ans++;
+                }
+            }
+        }
+
+        System.out.println(ans);
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n = scanner.nextInt();
+		double p = 0.00005;
+		double res = 0;
+		for (int i = 0; i < n; i++) {
+			int tx = (int) (res * p);
+			String x1 = scanner.next();
+			double x = Double.valueOf(x1) * 100;
+			res += x + tx;
+			System.out.printf("%.2f", res / 100.0);
+			System.out.println();
+		}
+
+	}
+
+}

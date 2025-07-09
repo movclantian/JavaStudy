@@ -1,0 +1,32 @@
+package practice;
+
+import java.util.*;
+//1:无需package
+//2: 类名必须Main, 不可修改
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		int s = scan.nextInt();
+		int[] a = new int[n];
+		for (int i = 0; i < a.length; i++) {
+			a[i]=scan.nextInt();
+		}
+		int sum=0,l=0,r=0,max=n+1;
+		while(r<n) {
+			sum+=a[r];
+			while(sum>=s) {
+				max=Math.min(max, r-l+1);
+				sum-=a[l];
+				l++;
+			}
+			r++;
+		}
+		if(max==n+1) {
+			max=0;
+		}
+		System.out.println(max);
+		scan.close();
+	}
+}

@@ -1,0 +1,43 @@
+package practice;
+
+import java.util.*;
+//1:无需package
+//2: 类名必须Main, 不可修改
+
+public class Main {
+ public static void main(String[] args) {
+     Scanner scan = new Scanner(System.in);
+     int n=scan.nextInt();
+     int m=0;
+     long a[]= new long[n+1];
+     for (int i = 0; i < n; i++) {
+		a[i]=scan.nextInt();
+	}
+     m=scan.nextInt();
+     int d[]=new int[n+1];
+     while(m-->0) {
+    	 int l=scan.nextInt()-1;
+    	 int r=scan.nextInt()-1;
+    	 d[l]+=1;
+    	 if(r+1<n) {
+    		 d[r+1]-=1;
+    		 
+    	 }
+     }
+     for (int i = 1; i < n; i++) {
+		d[i]+=d[i-1];
+	}
+     long ans=0;
+     for (int i = 0; i < n; i++) {
+		ans+=(long)a[i]*d[i];
+	}
+     Arrays.sort(a);
+     Arrays.sort(d);
+     long res=0;
+     for (int i = 0; i < n; i++) {
+ 		res+=(long)a[i]*d[i];
+ 	}
+     System.out.println(res-ans);
+     scan.close();
+ }
+}

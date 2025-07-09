@@ -1,0 +1,19 @@
+package practice;
+
+import java.util.*;
+//1:无需package
+//2: 类名必须Main, 不可修改
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String s=scan.next();
+		char S=s.toCharArray();
+		int l=0,r=,mid;
+		while(l<r) {
+			if(s[l])
+		}
+		
+		scan.close();
+	}
+}
