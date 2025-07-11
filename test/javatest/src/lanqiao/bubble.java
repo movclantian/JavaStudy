@@ -1,9 +1,8 @@
-package practice;
+package lanqiao;
 
 import java.util.Scanner;
 
-public class select {
-
+public class bubble {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
@@ -11,22 +10,21 @@ public class select {
 		for (int i = 0; i < b.length; i++) {
 			b[i] = scan.nextInt();
 		}
-		selectmethod(b, a);
+		bubblemethod(b, a);
+		
 		scan.close();
+
 	}
 
-	public static void selectmethod(int[] b, int a) {
-		for (int i = 0; i < b.length-1; i++) {
-			int min=i;
-			
-			for (int j=i; j < b.length; j++) {
-				if (b[min] > b[j]) {
-				min=j;
+	public static void bubblemethod(int[] b, int a) {
+		for (int i = 1; i < b.length; i++) {
+			for (int j = 0; j < b.length - i; j++) {
+				if (b[j] > b[j + 1]) {
+					int temp = b[j];
+					b[j] = b[j + 1];
+					b[j + 1] = temp;
 				}
 			}
-			int temp=b[i];
-			b[i]=b[min];
-			b[min]=temp;
 		}
 		for (int i = 0; i < b.length; i++) {
 			if(i>0) {
@@ -34,5 +32,6 @@ public class select {
 			}
 			System.out.print(b[i]);
 		}
+
 	}
 }

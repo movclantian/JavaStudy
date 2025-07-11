@@ -1,4 +1,4 @@
-package practice;
+package lanqiao;
 
 import java.util.Scanner;
 

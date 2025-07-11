@@ -1,4 +1,4 @@
-package practice;
+package lanqiao;
 import java.util.Scanner;
 public class quickly {
 	public static void main(String[] args) {

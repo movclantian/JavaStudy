@@ -1,10 +1,10 @@
-package practice;
+package lanqiao;
 
 import java.util.*;
 //1:无需package
 //2: 类名必须Main, 不可修改
 
-public class Main {
+public class SlidingWindow {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
